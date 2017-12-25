@@ -1,0 +1,4 @@
+{
+    "type": "subscribe",
+    "channels": [{ "name": "ticker", "product_ids": ["BCH-USD"] }]
+}
