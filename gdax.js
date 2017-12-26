@@ -4,7 +4,7 @@ const websocket = require('websocket').w3cwebsocket;
 const client = new websocket('wss://ws-feed.gdax.com', 'echo-protocol');
 const subscription = require('./subscribe.json');
 
-console.log('{save.GDAX.bch}')
+console.log('{save.GDAX}')
 var TRADES = 0;
 var PRICE = 0;
 
@@ -19,7 +19,7 @@ client.onopen = function() {
     process.stdout.clearLine();  // clear current text
     process.stdout.cursorTo(0);  // move cursor to beginning of line
     process.stdout.write(`{session} live-price: ${PRICE.toFixed(2)} trades: ${TRADES}`);
-  }, 1000);
+  }, 4000);
 
 };
 
